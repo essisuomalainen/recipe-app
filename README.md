@@ -1,3 +1,7 @@
+Recipe app created with React. Using API to find recipes online. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
