@@ -1,0 +1,15 @@
+.headerStyle {
+    font-style: normal;
+	font-weight: bold;
+	font-size: 38px;
+	line-height: 45px;
+	letter-spacing: 0.38em;
+	text-transform: uppercase;
+	color: white;
+}
+
+.headerContainer {
+    position: relative;
+	justify-self: center;
+	text-align: center;
+}
