@@ -9,17 +9,15 @@ const App = () => {
   const [query, setQuery] = useState("vegan");
 
   useEffect(() => {
+    const getRecipes = async () => {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
+      );
+      const data = await response.json();
+      setRecipes(data.meals || []);
+    };
     getRecipes();
   }, [query]);
-
-  const getRecipes = async () => {
-    const response = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
-    );
-    const data = await response.json();
-    setRecipes(data.meals || []);
-    console.log(data.meals);
-  };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
